@@ -1,0 +1,52 @@
+<h1>Employee and Tickets Details</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @employee.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employee.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @employee.phonenumber %>
+</p>
+
+
+
+<table border="4">
+  <thead>
+    <tr>
+      <th>Ticket Id</th>
+      <th>Ticket type</th>
+      <th>Description</th>
+     </tr>
+  </thead>
+
+  <tbody>
+    <% @employee.tickets.each do |ticket| %>
+      <tr>
+      	<td><%= ticket.id%></td>
+        <td><%= ticket.ticket_type %></td>
+        <td><%= ticket.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
