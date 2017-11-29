@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple demo of One to many relationship.
 
-Things you may want to cover:
+	* An employee can have many tickets. 
+	* A perticular ticket will have a perticular employee.
 
-* Ruby version
+	Employee has_many :tickets
+	Ticket belongs_to :employee
 
-* System dependencies
+NB : I have used simple form and pry gem in this project.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby Version : ruby 2.3.1p112 (2016-04-26) [x86_64-linux-gnu]
+Rails Version : Rails 5.1.4
+Databse : mysql

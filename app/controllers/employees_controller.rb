@@ -26,7 +26,7 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
     
-    binding.pry
+    # binding.pry
     respond_to do |format|
       if @employee.save
         format.html { redirect_to employees_path, notice: 'Employee was successfully created.' }
